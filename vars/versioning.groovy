@@ -1,1 +1,1 @@
-new com.kaiburr.Versioning.groovy
+new com.kaiburr.Versioning()
