@@ -3,7 +3,7 @@ def call(String version, String scope) {
     sh "git commit -a -m 'updating version to ${version}'"
     sh "git tag ${version}"
     sh 'git config --local credential.helper "!f() { echo username=$GIT_AUTH_USR; echo password=$GIT_AUTH_PSW; }; f"'
-    sh "git push origin ${version}"
+    sh "git push --atomic origin ${version} ${BRANCH_NAME}"
     sh "git config --local --unset credential.helper"
   }
 }
