@@ -1,4 +1,3 @@
-
 #!/usr/bin/groovy
 package com.kaiburr
 
@@ -20,4 +19,3 @@ def commitVersionGit(String version, String scope) {
 }
 
 return this;
-
