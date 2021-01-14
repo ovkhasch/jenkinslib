@@ -18,3 +18,6 @@ def commitVersionGit(String version, String scope) {
     sh "git push"
   }
 }
+
+return this;
+
