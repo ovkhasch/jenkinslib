@@ -1,4 +1,8 @@
-void setVersionMvn(String version, String scope) {
+
+#!/usr/bin/groovy
+package com.kaiburr
+
+def setVersionMvn(String version, String scope) {
   if (version != '') {
     major = scope == 'major' ? 'true' : 'false'
     minor = scope == 'major' || scope == 'minor' ? 'true' : 'false'
@@ -7,7 +11,7 @@ void setVersionMvn(String version, String scope) {
   }
 }
 
-void commitVersionGit(String version, String scope) {
+def commitVersionGit(String version, String scope) {
   if (version != '') {      
     sh "git commit -m 'updating version to ${version}'"
     sh "git tag ${version}"
